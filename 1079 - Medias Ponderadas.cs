@@ -9,25 +9,31 @@ namespace ConsoleApp22
     class Program
     {
         static void Main(string[] args)
+
         {
-            int n, cont;
-            float p1, p2, p3;
-            n = int.Parse(Console.ReadLine());
-            cont = 0;
-            while (cont < n)
+            int linha = 0, coluna = 1, contador = 1;
+            float soma = 0;
+            char o = char.Parse(Console.ReadLine());
+            float [,] m = new float[12, 12];
+            for (int i = 0; i < 12; i++)
             {
-                cont++;
-                string[] linha = Console.ReadLine().Split(' ');
-                p1 = float.Parse(linha[0]);
-                p2 = float.Parse(linha[1]);
-                p3 = float.Parse(linha[2]);
-                float media = (p1 * 2 + p2 * 3 + p3 * 5) / 10;
-                Console.WriteLine("{0:f1}", media);
+                for (int j = 0; j < 12; j++)
+                {
+                    m[i, j] = float.Parse(Console.ReadLine());
+                    if(linha == i && coluna == j)
+                    {
+                        soma += m[i, j];
+                    }
+                    coluna++;
+                }
 
+                contador++;
+                linha++;
+                coluna = contador;
             }
-
-            Console.ReadKey();
+            
+            Console.WriteLine("{0:f1}", soma);
+            Console.ReadKey(); 
         }
-
     }
 }

@@ -40,7 +40,7 @@ namespace ConsoleApp60
             Console.WriteLine("Alcool: {0}", alcool);
             Console.WriteLine("Gasolina: {0}", gasolina);
             Console.WriteLine("Diesel: {0}", diesel);
-            Console.ReadKey()
+            Console.ReadKey();
         }
     }
 }

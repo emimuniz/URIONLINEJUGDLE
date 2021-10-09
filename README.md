@@ -1,2 +1,2 @@
 # URIONLINEJUGDLE
-Questões resolvidas do site UriOnlineJudge - Python 3 
+Questões resolvidas do site UriOnlineJudge
